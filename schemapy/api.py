@@ -73,7 +73,8 @@ class API(object):
         return list(self._actions.keys())
 
     def define_actions_from_schema(self):
-        self._generator(self)
+        if self._generator is not None:
+            self._generator(self)
 
     def __getattr__(self, attrname):
         try:

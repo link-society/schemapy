@@ -6,7 +6,59 @@ define the schema for your API, the code that needs to be executed, then the
 validation part is dealt with for you. Everything is then encapsulated in a single
 object.
 
-*Schemapy* relies on *PyDAL* for schema definition but is not tied to it.
+*Schemapy* relies on PyDAL_ for schema definition but is not tied to it.
+
+See documentation_ for more informations.
+
+.. _documentation: https://schemapy.readthedocs.io
+.. _PyDAL: https://github.com/web2py/pydal
+
+.. image:: https://img.shields.io/pypi/l/schemapy.svg?style=flat-square
+   :target: https://pypi.python.org/pypi/schemapy/
+   :alt: License
+
+.. image:: https://img.shields.io/pypi/status/schemapy.svg?style=flat-square
+   :target: https://pypi.python.org/pypi/schemapy/
+   :alt: Development Status
+
+.. image:: https://img.shields.io/pypi/v/schemapy.svg?style=flat-square
+   :target: https://pypi.python.org/pypi/schemapy/
+   :alt: Latest release
+
+.. image:: https://img.shields.io/pypi/pyversions/schemapy.svg?style=flat-square
+   :target: https://pypi.python.org/pypi/schemapy/
+   :alt: Supported Python versions
+
+.. image:: https://img.shields.io/pypi/implementation/schemapy.svg?style=flat-square
+   :target: https://pypi.python.org/pypi/schemapy/
+   :alt: Supported Python implementations
+
+.. image:: https://img.shields.io/pypi/wheel/schemapy.svg?style=flat-square
+   :target: https://pypi.python.org/pypi/schemapy
+   :alt: Download format
+
+.. image:: https://travis-ci.org/linkdd/schemapy.svg?branch=master&style=flat-square
+   :target: https://travis-ci.org/linkdd/schemapy
+   :alt: Build status
+
+.. image:: https://coveralls.io/repos/github/linkdd/schemapy/badge.svg?style=flat-square
+   :target: https://coveralls.io/r/linkdd/schemapy
+   :alt: Code test coverage
+
+.. image:: https://img.shields.io/pypi/dm/schemapy.svg?style=flat-square
+   :target: https://pypi.python.org/pypi/schemapy/
+   :alt: Downloads
+
+.. image:: https://landscape.io/github/linkdd/schemapy/master/landscape.svg?style=flat-square
+   :target: https://landscape.io/github/linkdd/schemapy/master
+   :alt: Code Health
+
+Installation
+------------
+
+.. code-block:: text
+
+   pip install schemapy
 
 Usage
 -----
