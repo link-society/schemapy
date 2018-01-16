@@ -1,5 +1,5 @@
 [run]
-source = link
+source = schemapy
 
 [report]
 exclude_lines =
