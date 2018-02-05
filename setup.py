@@ -15,7 +15,6 @@ LICENSE = 'MIT'
 REQUIREMENTS = [
     'pyDAL>=17.11',
     'addict>=2.1.2',
-    'attrs>=17.4.0',
     'pytest-runner>=3.0'
 ]
 TESTS_REQUIREMENTS = [

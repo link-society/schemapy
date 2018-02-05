@@ -9,12 +9,12 @@ name = "pypi"
 
 pydal = "==17.11"
 addict = "==2.1.2"
-attrs = "==17.4.0"
 
 
 [dev-packages]
 
 tox = "*"
+wheel = "*"
 coverage = "*"
 python-decouple = "*"
 pytest-runner = "*"
