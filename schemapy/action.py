@@ -1,13 +1,11 @@
-# -*- coding: utf-8 -*-
-
 from schemapy.exceptions import ActionError
 from schemapy.response import Response
-from schemapy.utils import DotDict
 
 from pydal.objects import Table
+from addict import Dict
 
 
-class Action(object):
+class Action:
     def __init__(
         self,
         api,
@@ -19,8 +17,6 @@ class Action(object):
         ismethod=False,
         **kwargs
     ):
-        super(Action, self).__init__()
-
         if type not in ['create', 'read', 'update', 'delete']:
             raise ActionError('type must be create, read, update or delete')
 
@@ -53,11 +49,11 @@ class Action(object):
         self.fn = fn
         self.ismethod = ismethod
 
-        for attrname in kwargs:
-            setattr(self, attrname, kwargs[attrname])
+        for attrname, attrval in kwargs.items():
+            setattr(self, attrname, attrval)
 
     def __call__(self, *args, **kwargs):
-        req = DotDict()
+        req = Dict()
 
         for field in self.request:
             if field.required and field.name not in kwargs:

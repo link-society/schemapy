@@ -1,20 +1,15 @@
-# -*- coding: utf-8 -*-
-
 from schemapy.exceptions import ResponseError
-from schemapy.utils import DotDict
+from addict import Dict
 
-from collections import Iterable
-import six
+from collections import Iterable, Mapping
 
 
-class Response(object):
-    def __init__(self, rows, fields=None, *args, **kwargs):
-        super(Response, self).__init__(*args, **kwargs)
-
-        if isinstance(rows, six.string_types):
+class Response:
+    def __init__(self, rows, fields=None):
+        if isinstance(rows, str):
             raise ResponseError('rows cannot be a string')
 
-        if not isinstance(rows, Iterable):
+        if not isinstance(rows, Iterable) or isinstance(rows, Mapping):
             rows = [rows]
 
         if fields is None:
@@ -38,6 +33,9 @@ class Response(object):
             ])
         )
 
+    def __len__(self):
+        return self._nrows
+
     def __iter__(self):
         return self
 
@@ -56,7 +54,7 @@ class Response(object):
 
         row = self._rows[idx]
 
-        record = DotDict()
+        record = Dict()
 
         for field in self.fields:
             if field.required and field.name not in row:

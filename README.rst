@@ -45,10 +45,6 @@ See documentation_ for more informations.
    :target: https://coveralls.io/r/linkdd/schemapy
    :alt: Code test coverage
 
-.. image:: https://img.shields.io/pypi/dm/schemapy.svg?style=flat-square
-   :target: https://pypi.python.org/pypi/schemapy/
-   :alt: Downloads
-
 .. image:: https://landscape.io/github/linkdd/schemapy/master/landscape.svg?style=flat-square
    :target: https://landscape.io/github/linkdd/schemapy/master
    :alt: Code Health

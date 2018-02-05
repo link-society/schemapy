@@ -1,5 +1,3 @@
-# -*- coding: utf-8 -*-
-
 from schemapy.action import Action
 
 
@@ -53,20 +51,20 @@ def pydal_schema_actions_generator(api):
             return []
 
 
-class API(object):
+class API:
     def __init__(
         self,
         db,
         schema_actions_generator=pydal_schema_actions_generator,
-        *args, **kwargs
     ):
-        super(API, self).__init__(*args, **kwargs)
-
         self.db = db
         self._actions = {}
         self._generator = schema_actions_generator
 
         self.define_actions_from_schema()
+
+    def __del__(self):
+        self.close()
 
     @property
     def actions(self):
@@ -162,3 +160,12 @@ class API(object):
 
     def commit(self):
         self.db.commit()
+
+    def close(self):
+        self.db.close()
+
+    def __enter__(self):
+        return self
+
+    def __exit__(self, errtype, err, tb):
+        self.close()

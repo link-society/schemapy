@@ -8,20 +8,25 @@ import re
 NAME = 'schemapy'
 KEYWORDS = 'schema api database'
 DESC = 'Centralize database access'
-URL = 'https://git.link-society.com/linkdd/schemapy'
+URL = 'https://github.com/linkdd/schemapy'
 AUTHOR = 'David Delassus'
 AUTHOR_EMAIL = 'david.jose.delassus@gmail.com'
 LICENSE = 'MIT'
 REQUIREMENTS = [
-    'six>=1.11.0',
-    'pyDAL>=17.11'
+    'pyDAL>=17.11',
+    'addict>=2.1.2',
+    'attrs>=17.4.0',
+    'pytest-runner>=3.0'
+]
+TESTS_REQUIREMENTS = [
+    'pytest>=3.4.0',
+    'python-decouple>=3.1'
 ]
 
 CLASSIFIERS = [
     'Development Status :: 3 - Alpha',
     'Operating System :: OS Independent',
     'Programming Language :: Python',
-    'Programming Language :: Python :: 2.7',
     'Programming Language :: Python :: 3',
     'Programming Language :: Python :: 3.4',
     'Programming Language :: Python :: 3.5',
@@ -79,6 +84,7 @@ setup(
     author_email=AUTHOR_EMAIL,
     packages=find_packages(),
     test_suite=get_test_suite(),
+    tests_require=TESTS_REQUIREMENTS,
     install_requires=REQUIREMENTS,
     classifiers=CLASSIFIERS,
 )

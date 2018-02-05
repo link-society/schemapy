@@ -27,26 +27,27 @@ Defining a database schema with PyDAL
 Using validators
 ----------------
 
+Default validators are found in the ``schemapy.validators`` module.
+
+Example:
+
 .. code-block:: python
 
-   class IsOf(object):
-       def __init__(self, cls, *args, **kwargs):
-           super(IsOf, self).__init__(*args, **kwargs)
-
-           self.cls = cls
-
-       def __call__(self, value):
-           if not isinstance(value, self.cls):
+   def IS_OF(cls):
+       def validator(value):
+           if not isinstance(value, cls):
                return (value, 'wrong type')
 
            else:
                return (value, None)
 
+       return validator
+
 
    db.define_table(
        'persons',
-       Field('name', type='string', requires=[IsOf(str)], required=True),
-       Field('age', type='integer', requires[IsOf(int)], required=True)
+       Field('name', type='string', requires=[IS_OF(str)], required=True),
+       Field('age', type='integer', requires[IS_OF(int)], required=True)
    )
 
 Creating an API from a database

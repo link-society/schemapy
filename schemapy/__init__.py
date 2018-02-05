@@ -1,11 +1,14 @@
-# -*- coding: utf-8 -*-
-
-__version__ = '0.1.0'
+__version__ = '0.2.0'
 
 from schemapy.exceptions import SchemapyError, ActionError, ResponseError
+from schemapy.response import Response
+from schemapy.action import Action
 from schemapy.api import API
 from pydal import DAL, Field
 
+
 __all__ = [
-    'API', 'DAL', 'Field', 'SchemapyError', 'ActionError', 'ResponseError'
+    'API', 'DAL', 'Field',
+    'Action', 'Response',
+    'SchemapyError', 'ActionError', 'ResponseError'
 ]
