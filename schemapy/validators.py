@@ -3,7 +3,10 @@ def IS_OF(cls):
         if not isinstance(value, cls):
             return (
                 value,
-                f'expected {cls.__name__}, got {value.__class__.__name__}'
+                'expected {0}, got {1}'.format(
+                    cls.__name__,
+                    value.__class__.__name__
+                )
             )
 
         else:
@@ -15,7 +18,7 @@ def IS_OF(cls):
 def IS_GREATER_THAN(val):
     def validator(value):
         if value <= val:
-            return (value, f'{value} <= {val}')
+            return (value, '{0} <= {1}'.format(value, val))
 
         else:
             return (value, None)
@@ -26,7 +29,7 @@ def IS_GREATER_THAN(val):
 def IS_LESS_THAN(val):
     def validator(value):
         if value >= val:
-            return (value, f'{value} >= {val}')
+            return (value, '{0} >= {1}'.format(value, val))
 
         else:
             return (value, None)
@@ -37,7 +40,7 @@ def IS_LESS_THAN(val):
 def IS_GREATER_THAN_OR_EQUAL(val):
     def validator(value):
         if value < val:
-            return (value, f'{value} < {val}')
+            return (value, '{0} < {1}'.format(value, val))
 
         else:
             return (value, None)
@@ -48,7 +51,7 @@ def IS_GREATER_THAN_OR_EQUAL(val):
 def IS_LESS_THAN_OR_EQUAL(val):
     def validator(value):
         if value > val:
-            return (value, f'{value} > {val}')
+            return (value, '{0} > {1}'.format(value, val))
 
         else:
             return (value, None)
@@ -62,7 +65,10 @@ def IS_IN_RANGE(minimum, maximum):
             return (value, None)
 
         else:
-            return (value, f'{value} not in [{minimum};{maximum}]')
+            return (
+                value,
+                '{0} not in [{1};{2}]'.format(value, minimum, maximum)
+            )
 
     return validator
 

@@ -1,4 +1,4 @@
-__version__ = '0.2.3'
+__version__ = '0.2.4'
 
 from schemapy.exceptions import SchemapyError, ActionError, ResponseError
 from schemapy.response import Response

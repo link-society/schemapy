@@ -76,7 +76,7 @@ class API:
 
     def __getattr__(self, attrname):
         try:
-            attr = super(API, self).__getattr__(self, attrname)
+            attr = super().__getattr__(attrname)
 
         except AttributeError as err:
             try:
