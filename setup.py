@@ -8,10 +8,10 @@ import re
 NAME = 'schemapy'
 KEYWORDS = 'schema api database'
 DESC = 'Centralize database access'
-URL = 'https://github.com/linkdd/schemapy'
-AUTHOR = 'David Delassus'
-AUTHOR_EMAIL = 'david.jose.delassus@gmail.com'
-LICENSE = 'MIT'
+URL = 'https://github.com/link-society/schemapy'
+AUTHOR = 'Link Society'
+AUTHOR_EMAIL = 'contact@link-society.com'
+LICENSE = 'Apache'
 REQUIREMENTS = [
     'pyDAL>=17.11',
     'addict>=2.1.2',
