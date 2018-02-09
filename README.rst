@@ -37,16 +37,16 @@ See documentation_ for more informations.
    :target: https://pypi.python.org/pypi/schemapy
    :alt: Download format
 
-.. image:: https://travis-ci.org/linkdd/schemapy.svg?branch=master&style=flat-square
-   :target: https://travis-ci.org/linkdd/schemapy
+.. image:: https://travis-ci.org/link-society/schemapy.svg?branch=master&style=flat-square
+   :target: https://travis-ci.org/link-society/schemapy
    :alt: Build status
 
-.. image:: https://coveralls.io/repos/github/linkdd/schemapy/badge.svg?style=flat-square
-   :target: https://coveralls.io/r/linkdd/schemapy
+.. image:: https://coveralls.io/repos/github/link-society/schemapy/badge.svg?style=flat-square
+   :target: https://coveralls.io/r/link-society/schemapy
    :alt: Code test coverage
 
-.. image:: https://landscape.io/github/linkdd/schemapy/master/landscape.svg?style=flat-square
-   :target: https://landscape.io/github/linkdd/schemapy/master
+.. image:: https://landscape.io/github/link-society/schemapy/master/landscape.svg?style=flat-square
+   :target: https://landscape.io/github/link-society/schemapy/master
    :alt: Code Health
 
 Installation
